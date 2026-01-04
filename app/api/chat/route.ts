@@ -1,3 +1,5 @@
+export const runtime = "nodejs"
+
 const systemPrompt = `You are an intelligent AI assistant for a developer's portfolio. Your role is to help visitors learn more about the portfolio owner's skills, projects, and experience.
 
 When answering questions:

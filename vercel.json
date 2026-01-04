@@ -1,10 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "nextjs",
-  "functions": {
-    "app/api/chat/route.ts": {
-      "runtime": "nodejs22.x",
-      "maxDuration": 60
-    }
-  }
+  "framework": "nextjs"
 }
