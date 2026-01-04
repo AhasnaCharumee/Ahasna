@@ -21,14 +21,19 @@ export default function FadeInSection({ children, delay = 0 }: FadeInSectionProp
           observer.unobserve(entry.target)
         }
       },
-      { threshold: 0.1 },
+      { threshold: 0, rootMargin: "20% 0px" },
     )
 
     if (ref.current) {
       observer.observe(ref.current)
     }
 
-    return () => observer.disconnect()
+    const fallback = setTimeout(() => setIsVisible(true), delay + 1200)
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallback)
+    }
   }, [delay])
 
   return (
