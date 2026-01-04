@@ -255,7 +255,7 @@ function ProjectGrid({ projects }: any) {
           key={project.id}
           className="group bg-card rounded-lg border border-border overflow-hidden hover:border-accent transition-all duration-300 hover:shadow-lg"
         >
-          <div className="relative h-52 sm:h-48 overflow-hidden bg-secondary">
+          <div className="relative h-52 sm:h-48 min-h-[220px] overflow-hidden bg-secondary">
             <Image
               src={project.image || "/placeholder.svg"}
               alt={project.title}
@@ -308,7 +308,7 @@ function ProjectGrid({ projects }: any) {
 // ---------------------------
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 scroll-mt-28">
       <div className="max-w-6xl mx-auto space-y-16">
 
         {/* Academic Projects */}

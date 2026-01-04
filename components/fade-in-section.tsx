@@ -21,7 +21,7 @@ export default function FadeInSection({ children, delay = 0 }: FadeInSectionProp
           observer.unobserve(entry.target)
         }
       },
-      { threshold: 0, rootMargin: "20% 0px" },
+      { threshold: 0.1, rootMargin: "0px" },
     )
 
     if (ref.current) {
