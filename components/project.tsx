@@ -255,11 +255,13 @@ function ProjectGrid({ projects }: any) {
           key={project.id}
           className="group bg-card rounded-lg border border-border overflow-hidden hover:border-accent transition-all duration-300 hover:shadow-lg"
         >
-          <div className="relative h-48 overflow-hidden bg-secondary">
+          <div className="relative h-52 sm:h-48 overflow-hidden bg-secondary">
             <Image
               src={project.image || "/placeholder.svg"}
               alt={project.title}
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              loading="lazy"
               className="object-cover group-hover:scale-105 transition-transform duration-300"
             />
           </div>
